@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Shloka</string>
+    <string name="verse_snippet">Verse %1$d: %2$s</string>
+    <string name="verses_count">Total Verses: %1$d</string>
+</resources>

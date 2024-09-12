@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Shloka"
+        tools:targetApi="31">
+        <activity
+            android:name=".temp1"
+            android:exported="false" />
+        <activity
+            android:name=".Temp"
+            android:exported="false" />
+        <activity
+            android:name=".VerseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerseListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".g_ChapterListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".v_settings"
+            android:exported="false" />
+        <activity
+            android:name=".f_home_page"
+            android:exported="false" />
+        <activity
+            android:name=".e_forgot_password"
+            android:exported="false" />
+        <activity
+            android:name=".d_signup_page"
+            android:exported="false" />
+        <activity
+            android:name=".c_login_page"
+            android:exported="false" />
+        <activity
+            android:name=".b_welcome_screen"
+            android:exported="false" />
+        <activity
+            android:name=".a_splash_screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
