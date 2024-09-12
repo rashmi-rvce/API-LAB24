@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizer</title>
+</head>
+<body>
+    <h1>Resource Usage</h1>
+	
+	<h2>Health Status</h2>
+	    <p>Application Status: <span id="app-status">Loading...</span></p>
+
+    <h2>Disk Usage</h2>
+    <p>Total Disk Space: <span id="disk-total">Loading...</span></p>
+    <p>Free Disk Space: <span id="disk-free">Loading...</span></p>
+
+    <h2>Memory Usage</h2>
+    <p>Memory Usage: <span id="memory-usage">Loading...</span></p>
+
+    <h2>CPU Usage</h2>
+    <p>CPU Usage: <span id="cpu-usage">Loading...</span></p>
+
+    <h2>HTTP Request Metrics</h2>
+    <pre id="http-requests">Loading...</pre>
+
+    <script>
+        // Fetch total disk space
+        fetch('http://localhost:9999/api/disktotal')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('disk-total').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('disk-total').textContent = 'Error fetching total disk space';
+                console.error('Error:', error);
+            });
+
+        // Fetch free disk space
+        fetch('http://localhost:9999/api/diskfree')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('disk-free').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('disk-free').textContent = 'Error fetching free disk space';
+                console.error('Error:', error);
+            });
+
+        // Fetch memory usage
+        fetch('http://localhost:9999/api/memory-usage')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('memory-usage').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('memory-usage').textContent = 'Error fetching memory usage';
+                console.error('Error:', error);
+            });
+
+        // Fetch CPU usage
+        fetch('http://localhost:9999/api/cpu-usage')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('cpu-usage').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('cpu-usage').textContent = 'Error fetching CPU usage';
+                console.error('Error:', error);
+            });
+
+        // Fetch HTTP request metrics
+        fetch('http://localhost:9999/api/httpreqs')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('http-requests').textContent = data;
+            })
+            .catch(error => {
+                document.getElementById('http-requests').textContent = 'Error fetching HTTP request metrics';
+                console.error('Error:', error);
+            });
+			
+		// Fetch health status
+			       fetch('http://localhost:9999/api/health')
+			           .then(response => response.text())
+			           .then(data => {
+			               document.getElementById('app-status').textContent = data;
+			           })
+			           .catch(error => {
+			               document.getElementById('app-status').textContent = 'Error fetching application status';
+			               console.error('Error:', error);
+			           });
+    </script>
+</body>
+</html>
+

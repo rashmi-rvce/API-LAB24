@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimizer </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Optimization Actions</h1>
+
+    <button id="optimize-cpu">Optimize CPU</button>
+    <button id="optimize-memory">Optimize Memory</button>
+    <button id="clean-temp-files">Clean Temp Files</button>
+
+    <div id="result">Results will be displayed here.</div>
+
+    <script>
+        document.getElementById('optimize-cpu').addEventListener('click', function() {
+            fetch('http://localhost:9999/optimize/cpu')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').textContent = 'CPU Optimization: ' + data;
+                })
+                .catch(error => {
+                    document.getElementById('result').textContent = 'Error during CPU optimization';
+                    console.error('Error:', error);
+                });
+        });
+
+        document.getElementById('optimize-memory').addEventListener('click', function() {
+            fetch('http://localhost:9999/optimize/memory')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').textContent = 'Memory Optimization: ' + data;
+                })
+                .catch(error => {
+                    document.getElementById('result').textContent = 'Error during Memory optimization';
+                    console.error('Error:', error);
+                });
+        });
+
+        document.getElementById('clean-temp-files').addEventListener('click', function() {
+            fetch('http://localhost:9999/optimize/temp')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').textContent = 'Temp Files Cleanup: ' + data;
+                })
+                .catch(error => {
+                    document.getElementById('result').textContent = 'Error during Temp files cleanup';
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+</html>
