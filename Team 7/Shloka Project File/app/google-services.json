@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "307309078138",
+    "project_id": "shloka-dcc05",
+    "storage_bucket": "shloka-dcc05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307309078138:android:b9d2afd700c58bd5a3bdc3",
+        "android_client_info": {
+          "package_name": "com.suchith.shloka"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsk7rcRgQbTA2n_K35e4uKir5Qenlh3Qk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
