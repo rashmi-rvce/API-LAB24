@@ -1,0 +1,35 @@
+Last login: Tue Sep 10 12:19:43 on ttys006
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Navasmeets-MacBook-Air:~ navasmeet$ vim prometheus.yml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'weather_metrics'
+    static_configs:
+      - targets: ['localhost:3001']
+
+~                                                                                                               
+~                                                                                                               
+~ 
