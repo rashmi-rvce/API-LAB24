@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #f7f7f7; /* light gray background */
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  background-color: #333; /* dark gray background */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50; /* green button color */
+  color: #fff;
+}
+
+button:hover {
+  background-color: #3e8e41; /* darker green on hover */
+}
+
+#appContent {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e9ecef; /* light gray background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

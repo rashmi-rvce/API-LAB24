@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>API Web App</h1>
+  <div class="menu">
+    <div class="button-grid">
+      <button onclick="loadApp('currency')">Currency Converter</button>
+      <button onclick="loadApp('weather')">Weather Forecaster</button>
+      <button onclick="loadApp('sentiment')">Text Sentiment Analyzer</button>
+      <button onclick="loadApp('stock')">Stock Price Tracker</button>
+      <button onclick="loadApp('unit')">Unit Converter</button>
+      <button onclick="loadApp('expense')">Personal Expense Tracker</button>
+    </div>
+  </div>
+  
+  <div id="appContent" class="result-container"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
