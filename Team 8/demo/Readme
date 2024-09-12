@@ -1,0 +1,30 @@
+Backup and Recovery Guide
+Backup Process
+
+Steps to Create a Backup
+1. Stop the application (optional but recommended)
+2. Database Backup (if applicable)
+3. Application Files Backup
+4. Restart the application
+
+Recovery Process
+Steps to Restore from Backup
+1. Stop the application (optional but recommended)
+2. Restore the Database
+3. Restore Application Files
+ 4. Restart the application
+
+Backup Schedule
+Daily Backups: Backups are scheduled daily at midnight using cron jobs.
+Retention Policy: Backups older than 7 days are automatically deleted.
+
+Storage Location
+Local Backup Directory
+Cloud Backup Location (if applicable)
+
+Troubleshooting
+Common Issues
+1. Permission Denied
+2. Incomplete Backups
+3. Backup Corruption
+   
